@@ -4,12 +4,17 @@
 #include "libft/libft.h"
 #include <limits.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
 
+typedef struct
+{
+    int id;
+    char *message;
+} ThreadData;
 
-int	ft_atoi_v2(char *str);
-long	calculate_number(char *str, int sign);
-
-
+int ft_atoi_v2(char *str);
+long calculate_number(char *str, int sign);
 
 
 #endif
