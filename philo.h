@@ -7,11 +7,15 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-typedef struct
+typedef struct s_mythread
 {
-    int id;
-    char *message;
-} ThreadData;
+    int *id;
+    int time_to_die;
+    int time_to_eat;
+    int time_to_sleep;
+    int times_philosopher_must_eat;
+
+} t_mythread;
 
 int ft_atoi_v2(char *str);
 long calculate_number(char *str, int sign);
