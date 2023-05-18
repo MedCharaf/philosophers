@@ -7,7 +7,7 @@ void *print_message(void *arg)
     t_mythread *mythread = (t_mythread*)arg;
     t_mydata *mydata = mythread->mydata;
     int i = 0;
-    while (i < 1000000) {
+    while (i <mythread->id) {
         pthread_mutex_lock(&mydata->forks[mythread->id]);
         pthread_mutex_lock(&mydata->forks[(mythread->id + 1) % mydata->num_of_philos]);
         incr++;

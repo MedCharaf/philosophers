@@ -16,7 +16,7 @@ OBJS_C = ${SRC_PS:.c=.o}
 
 all: $(NAME)
 $(NAME):  $(OBJS_C)  $(LIBFT) $(LIBFT_SRC)
-	@$(CC)  $(CFLAGS) $(OBJS_C) $(LIBFT) -o $(NAME)
+	@$(CC)  $(CFLAGS) $(OBJS_C) $(LIBFT) -fsanitize=thread -g -o $(NAME)
 
 
 
